@@ -1,7 +1,5 @@
-import os
+
 import pandas as pd
-os.getcwd()
-os.chdir("C://Users//rshan")
 
 # Set working directory (change path as per your system)
 # Load dataset
