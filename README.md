@@ -1,61 +1,81 @@
-# Titanic Survival Prediction
+Titanic Survival Prediction
 
-A machine learning project that predicts whether a passenger would survive the Titanic disaster based on passenger information.
+A machine learning classification project that predicts passenger survival using the Titanic dataset.
 
-## 📌 Project Overview
+📌 Project Overview
 
-This project uses the Titanic dataset to build a machine learning classification model for predicting passenger survival.
+This project uses passenger information from the Titanic dataset to build a Logistic Regression model for predicting whether a passenger survived.
 
-The project includes data preprocessing, feature selection, model training, prediction, and evaluation.
+The project demonstrates data preprocessing, handling missing values, categorical variable encoding, model training, prediction, and evaluation.
 
-## 🛠️ Technologies Used
+🛠️ Technologies Used
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Jupyter Notebook / Spyder
+Python
+Pandas
+Scikit-learn
+Spyder
+📊 Dataset
 
-## 📊 Dataset
+The dataset contains passenger information such as:
 
-The Titanic dataset contains information about passengers, including:
+Passenger class
+Sex
+Age
+Fare
+Embarked location
+Survival status
 
-- Passenger class
-- Sex
-- Age
-- Number of siblings/spouses
-- Number of parents/children
-- Fare
-- Embarked location
-- Survival status
+The target variable is Survived.
 
-The target variable is **Survived**.
+🔍 Data Preprocessing
 
-## 🔍 Project Workflow
+The following preprocessing steps were performed:
 
-1. Loaded the Titanic dataset.
-2. Cleaned and prepared the data.
-3. Selected relevant features.
-4. Split the data into training and testing sets.
-5. Trained a machine learning classification model.
-6. Generated predictions.
-7. Evaluated the model's performance.
+Removed unnecessary columns such as PassengerId, Name, SibSp, Parch, Ticket, and Cabin.
+Filled missing Age values using the median age.
+Filled missing Embarked values using the mode (S).
+Converted categorical variables into dummy variables using pd.get_dummies().
 
-## 🤖 Machine Learning
+🤖 Machine Learning Model
 
-The project uses **Logistic Regression** for classification.
+A Logistic Regression model was trained using:
 
-The model learns patterns from the training data and predicts whether passengers survived based on their characteristics.
+70% of the data for training
+30% of the data for testing
+random_state = 42
 
-## 📈 Results
+The model was used to predict passenger survival on the test dataset.
 
-The model was evaluated using classification metrics such as accuracy and a confusion matrix.
+📈 Model Evaluation
 
-## 🚀 How to Run
+The model was evaluated using:
 
-1. Install Python.
-2. Install the required libraries:
+Confusion Matrix
+Classification Report
+Accuracy Score
+🚀 How to Run
+Install Python.
+Install the required libraries:
+pip install pandas scikit-learn
+Keep Titanic.csv in the same folder as titanic.py.
+Run:
+python titanic.py
 
-```bash
-pip install pandas numpy scikit-learn matplotlib
+📁 Project Structure
+
+Titanic-Survival-Prediction/
+│
+├── README.md
+├── titanic.py
+└── Titanic.csv
+🎯 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+Data preprocessing
+Handling missing data
+Categorical variable encoding
+Logistic Regression
+Train-test splitting
+Model evaluation
+Python-based machine learning
